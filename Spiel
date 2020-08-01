@@ -1,0 +1,28 @@
+import random
+
+
+print("Herzlich Willkommen zum Zahlen raten !")
+print("Wir suchen eine Zahl zwischen 0 und 100, du hast 5 versuche.")
+
+versuche = 5
+zufallsZahl = random.randint(0,100)
+
+while versuche > 0:
+    versuche -=1
+    print("Deine Schätzung:")
+    inputt = input()
+    antwort = int(inputt)
+    if zufallsZahl>antwort:
+        print("Die gesuchte zahl ist größer.")
+    if zufallsZahl<antwort:
+        print("Die gesuchte zahl ist kleiner.")  
+    elif zufallsZahl == antwort:
+        print("Die gesuchte Zahl wurde gefunden, Glückwunsch!")
+        print("Du hattest noch " + str(versuche) + " Versuche übrig.")
+        break
+    print("Du hast noch " + str(versuche) + " Versuche übrig.")
+    if versuche == 0:
+        print("Schade, du hast leider verloren! Versuche es doch noch einmal.")
+
+ 
+
